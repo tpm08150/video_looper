@@ -8,7 +8,7 @@ import anvil.server
 import subprocess
 from subprocess import run
 
-anvil.server.connect("3T4LX5TMNT6JILFBOJEN7EXH-VH6M3NJ4BWUOMHQD")
+anvil.server.connect("")
 v = 0
 p = 0
         
