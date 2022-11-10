@@ -7,7 +7,7 @@
 import time
 import anvil.server
 import subprocess
-from main import *
+#from main import *
 import asyncio
 from datetime import datetime
 from datetime import date
