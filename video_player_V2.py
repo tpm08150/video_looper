@@ -60,9 +60,9 @@ def play_video(video_file):
 def stop_video():
     global p
     global v
+    if v == 1:
+        p.kill()
     v = 0
-    p.kill()
-
 
 @anvil.server.callable
 def send_file(media, file_name):
@@ -125,7 +125,7 @@ def date_and_time():
                 p.kill()
                 v = 0
 
-            if current_time == start_list[x] and str(today) == str(date_start_list[x]):
+            if current_time == start_list[x] and str(today) == str(date_start_list[x]) and v == 0:
                 p = subprocess.Popen("exec " + f"ffplay -loop 0 -fs {video_list[x]}", stdout=subprocess.PIPE, shell=True)
                 v = 1
             x += 1
